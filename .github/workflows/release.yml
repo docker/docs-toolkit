@@ -13,15 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Install Vale and check fixture
-        uses: vale-cli/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3
-        with:
-          version: 3.17.0
-          files: fixtures/valid.md
-          reporter: local
-          fail_on_error: true
+      - name: Install Vale
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VALE_VERSION: 3.17.0
+        run: |
+          archive="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          gh release download "v${VALE_VERSION}" \
+            --repo vale-cli/vale \
+            --pattern "$archive" \
+            --pattern "vale_${VALE_VERSION}_checksums.txt" \
+            --dir "$RUNNER_TEMP"
+          cd "$RUNNER_TEMP"
+          sha256sum --check --ignore-missing "vale_${VALE_VERSION}_checksums.txt"
+          tar -xzf "$archive" vale
+          sudo install vale /usr/local/bin/vale
 
       - name: Test release package
         run: ./scripts/test.sh
