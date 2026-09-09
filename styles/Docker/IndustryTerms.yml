@@ -1,0 +1,21 @@
+extends: substitution
+message: "Use the canonical industry term '%s' instead of '%s'."
+level: warning
+ignorecase: true
+action:
+  name: replace
+swap:
+  '\bapp ?armor\b': AppArmor
+  '\bbusybox\b': BusyBox
+  '\bgithub\b': GitHub
+  '\bgithub actions\b': GitHub Actions
+  '\bjavascript\b': JavaScript
+  '\bkubernetes\b': Kubernetes
+  '\bmacos\b': macOS
+  '\bmysql\b': MySQL
+  '\bnginx\b': Nginx
+  '\bnvidia\b': NVIDIA
+  '\bpowershell\b': PowerShell
+  '\bpytorch\b': PyTorch
+  '\btestcontainers\b': Testcontainers
+  '\bvisual studio code\b': Visual Studio Code

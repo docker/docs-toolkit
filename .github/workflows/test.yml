@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Vale and check fixture
+        uses: vale-cli/vale-action@v3
+        with:
+          version: 3.17.0
+          files: fixtures/valid.md
+          reporter: local
+          fail_on_error: true
+
+      - name: Test release package
+        run: ./scripts/test.sh

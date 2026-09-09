@@ -1,0 +1,20 @@
+extends: substitution
+message: "Use the canonical Docker name '%s' instead of '%s'."
+level: error
+ignorecase: true
+action:
+  name: replace
+swap:
+  '\bbuild[ -]?kit\b': BuildKit
+  '\bbuildx\b': Buildx
+  '\bdocker build cloud\b': Docker Build Cloud
+  '\bdocker business\b': Docker Business
+  '\bdocker ce\b': Docker Engine
+  '\bdocker compose\b': Docker Compose
+  '\bdocker desktop\b': Docker Desktop
+  '\bdocker engine\b': Docker Engine
+  '\bdocker extension\b': Docker Extension
+  '\bdocker hub\b': Docker Hub
+  '\bdocker scout\b': Docker Scout
+  '\bdocker team\b': Docker Team
+  '\bdockerfile\b': Dockerfile
