@@ -2,6 +2,7 @@ name: Scorecard supply-chain security
 
 on:
   branch_protection_rule:
+  workflow_dispatch:
   schedule:
     - cron: "0 6 * * 1"
   push:
@@ -13,6 +14,7 @@ permissions: {}
 jobs:
   analysis:
     name: Scorecard analysis
+    if: github.event.repository.visibility == 'public'
     runs-on: ubuntu-latest
     permissions:
       actions: read
