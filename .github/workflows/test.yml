@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Install Vale and check fixture
-        uses: vale-cli/vale-action@v3
+        uses: vale-cli/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3
         with:
           version: 3.17.0
           files: fixtures/valid.md
