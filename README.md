@@ -74,10 +74,10 @@ The package does not provide a general spelling vocabulary. Canonical-name
 rules enforce established names and intentional naming variants; each
 repository owns spelling exceptions for its domain.
 
-Industry-term rules target recognizable naming variants such as `Github`,
-`Javascript`, and `TestContainers`. They do not flag every lowercase form,
-because lowercase terms often appear legitimately in commands, image names,
-paths, and identifiers.
+Industry-term rules enforce canonical forms such as `GitHub`, `JavaScript`,
+`NGINX`, and `Testcontainers`. Vale ignores names in inline and block code;
+commands, image names, paths, and identifiers in prose should be formatted as
+code where their casing intentionally differs.
 
 Vale's built-in style is optional. Repositories that want its spelling and
 other checks can enable it separately and maintain an appropriate local

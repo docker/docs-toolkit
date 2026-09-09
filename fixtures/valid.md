@@ -2,3 +2,9 @@
 
 Use Docker Engine and BuildKit to build and run the application. Use
 Testcontainers to test it.
+
+Run the `nginx` image:
+
+```console
+$ docker run nginx
+```

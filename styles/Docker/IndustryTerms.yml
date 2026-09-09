@@ -1,18 +1,21 @@
 extends: substitution
 message: "Use the canonical industry term '%s' instead of '%s'."
 level: warning
-ignorecase: false
+ignorecase: true
 action:
   name: replace
 swap:
-  '\bBusybox\b': BusyBox
-  '\bGithub Actions\b': GitHub Actions
-  '\bGithub\b': GitHub
-  '\bJavascript\b': JavaScript
-  '\bMac ?OS\b': macOS
-  '\bMysql\b': MySQL
-  '\bMySql\b': MySQL
-  '\bNvidia\b': NVIDIA
-  '\bPowershell\b': PowerShell
-  '\bPytorch\b': PyTorch
-  '\bTestContainers\b': Testcontainers
+  '\bapp ?armor\b': AppArmor
+  '\bbusybox\b': BusyBox
+  '\bgithub actions\b': GitHub Actions
+  '\bgithub\b': GitHub
+  '\bjavascript\b': JavaScript
+  '\bkubernetes\b': Kubernetes
+  '\bmac ?os\b': macOS
+  '\bmysql\b': MySQL
+  '\bnginx\b': NGINX
+  '\bnvidia\b': NVIDIA
+  '\bpowershell\b': PowerShell
+  '\bpytorch\b': PyTorch
+  '\btestcontainers\b': Testcontainers
+  '\bvisual studio code\b': Visual Studio Code
