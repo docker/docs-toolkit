@@ -13,7 +13,6 @@ swap:
   '\bdocker compose\b': Docker Compose
   '\bdocker desktop\b': Docker Desktop
   '\bdocker engine\b': Docker Engine
-  '\bdocker extension\b': Docker Extension
   '\bdocker hub\b': Docker Hub
   '\bdocker scout\b': Docker Scout
   '\bdocker team\b': Docker Team
