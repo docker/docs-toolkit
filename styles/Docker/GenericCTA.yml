@@ -1,7 +1,8 @@
 extends: existence
 message: "Avoid generic calls to action: '%s'"
 level: warning
-scope: raw
+scope: link
 ignorecase: true
-raw:
-  - \[(click here|(find out|learn) more)\]
+tokens:
+  - 'click here'
+  - '(?:find out|learn) more'
