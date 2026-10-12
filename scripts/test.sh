@@ -36,3 +36,5 @@ test -f "$test_dir/.vale/styles/Docker/Avoid.yml"
 test -f "$test_dir/.vale/styles/Docker/Capitalization.yml"
 test -f "$test_dir/.vale/styles/Docker/CanonicalNames.yml"
 test -f "$test_dir/.vale/styles/Docker/IndustryTerms.yml"
+
+python3 "$repo_dir/scripts/test-rules.py"

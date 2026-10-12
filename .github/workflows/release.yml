@@ -18,7 +18,7 @@ jobs:
       - name: Install Vale
         env:
           GH_TOKEN: ${{ github.token }}
-          VALE_VERSION: 3.17.0
+          VALE_VERSION: 3.24.0
         run: |
           archive="vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
           gh release download "v${VALE_VERSION}" \

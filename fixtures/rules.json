@@ -1,0 +1,19 @@
+{
+  "Avoid": {"bad": "This is really robust.", "good": "This restores the sandbox."},
+  "CanonicalNames": {"bad": "Use docker compose.", "good": "Use Docker Compose and BuildKit."},
+  "Capitalization": {"bad": "Use docker to run it.", "good": "Use Docker to run it."},
+  "Exclamation": {"bad": "Run it now!", "good": "Run SDKMAN! to install it."},
+  "GenericCTA": {"bad": "[click here](https://example.com)", "good": "[Install Docker](https://example.com)"},
+  "HeadingPunctuation": {"bad": "# Configure the service.", "good": "# Configure the service"},
+  "IndustryTerms": {"bad": "Use javascript with github actions.", "good": "Use JavaScript with GitHub Actions."},
+  "ListComma": {"bad": "- Configure the service,", "good": "- Configure the service."},
+  "MetaCommentary": {"bad": "It is worth noting that this stops the service.", "good": "This stops the service."},
+  "OxfordComma": {"bad": "Use red, blue and green.", "good": "Use red, blue, and green."},
+  "PromotionalOpeners": {"bad": "In today's world, services need containers.", "good": "The service runs in a container."},
+  "RecommendedWords": {"bad": "Utilize the adaptor.", "good": "Use the adapter."},
+  "Spacing": {"bad": "Use  the service.", "good": "Use the service."},
+  "URLFormat": {"bad": "Open the URL for the service.", "good": "Open the URL of the service."},
+  "Units": {"bad": "Allocate two megabytes.", "good": "Allocate 2 MB."},
+  "VersionText": {"bad": "Use version 1.2 or higher.", "good": "Use version 1.2 or later."},
+  "We": {"bad": "We configure our service.", "good": "Configure your service."}
+}
